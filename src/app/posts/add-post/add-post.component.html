@@ -1,0 +1,21 @@
+<div class="row my-4">
+  <div class="col-md-12">
+    <h3>Add Post</h3>
+    <hr />
+    <form [formGroup]="postForm" (ngSubmit)="onAddPost()">
+      <div class="mb-3">
+        <label>Titlle</label>
+        <input formControlName="title" type="text" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label>Description</label>
+        <textarea formControlName="description" class="form-control"></textarea>
+      </div>
+
+      <div class="my-3">
+        <button [disabled]="!postForm.valid" type="submit" class="btn btn-primary">Add Post</button>
+      </div>
+    </form>
+  </div>
+</div>
